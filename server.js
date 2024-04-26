@@ -21,7 +21,7 @@ app.use(cors());
 app.use(express.json());
 
 
-const MONGO_DB = process.env.MONGO_DB;
+const MONGO_DB = "mongodb+srv://ashiqarooj846:q37Ty0AWxOSHvCZR@cluster0.u27nnaj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 connectDb(MONGO_DB);
 
 app.use("/api", router);
@@ -46,7 +46,7 @@ if (process.env.NODE_ENV === "PRODUCTION") {
   });
 }
 
-const PORT = process.env.PORT;
+const PORT = 5050;
 app.listen(PORT, (req, res) => {
   console.log(`server is running on port ${PORT}`);
 });
