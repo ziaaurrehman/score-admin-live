@@ -34,7 +34,8 @@ app.use("/api", newsRoute);
 app.use("/api", newsUpdateRoute);
 app.use("/api", newsRouter);
 
-if (process.env.NODE_ENV === "PRODUCTION") {
+const NODE_ENV="PRODUCTION";
+if (NODE_ENV === "PRODUCTION") {
   app.use(express.static(path.join(__dirname, "./client/dist")));
 
   app.get("*", (req, res) =>

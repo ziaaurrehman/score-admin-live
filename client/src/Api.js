@@ -1,8 +1,10 @@
 import instance from "axios";
 import { toast } from "react-toastify";
 
+  //baseURL: import.meta.env.VITE_API_BASE_URL, temporarily removed from axios instance
+
 const axios = instance.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL,
+  baseURL: 'https://score-admin-live.onrender.com/api',
 
   headers: {
     "Content-Type": "application/json",
