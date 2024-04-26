@@ -34,6 +34,7 @@ const MatchList = ({ isGrid }) => {
         setMatches(extractedMatches);
       } catch (error) {
         toast.error("Error fetching matches:", error);
+        console.log(error)
       } finally {
         setLoading(false);
       }
